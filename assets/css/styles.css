@@ -1,0 +1,48 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    background: var(--secondary);
+    color: var(--primary);
+    text-align: center;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    color: var(--primary);
+}
+
+header p {
+    margin: 0;
+    font-size: 1.2em;
+    color: var(--primary);
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: var(--primary);
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    color: var(--primary);
+}
