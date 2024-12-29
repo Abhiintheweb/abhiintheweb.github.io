@@ -1,2 +1,6 @@
 theme: jekyll-theme-time-machine
-source: /static-website/src/
+source: static-website/src/
+title: Abhishek's Resume
+description: This is Abhishek's resume website hosted on GitHub Pages.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://abhiintheweb.github.io" # the base hostname & protocol for your site
