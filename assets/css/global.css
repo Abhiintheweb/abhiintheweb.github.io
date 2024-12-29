@@ -1,0 +1,76 @@
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: var(--dark);
+}
+
+body {
+  background-color: #fff;
+  color: var(--dark);
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 300;
+  text-align: left;
+  margin: 0;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+}
+
+@media (min-width: var(--breakpoint-sm)) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: var(--breakpoint-md)) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: var(--breakpoint-lg)) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: var(--breakpoint-xl)) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+.section {
+  padding: 70px 10px;
+}
+
+.section .section-title {
+  color: var(--primary);
+  font-size: calc(20px + (35 - 20) * ((100vw - 300px) / (1300 - 300)));
+}
+
+.section .section-subtitle {
+  font-weight: 400;
+  margin-bottom: 6px;
+  opacity: .6;
+}
+
+.section-sm {
+  padding: 40px 0 !important;
+}
+
+.section-md {
+  padding: 60px 0 !important;
+}
+
+.section-lg {
+  padding: 100px 0 !important;
+}

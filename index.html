@@ -1,21 +1,359 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Static Website</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <header>
-        <h1>Welcome to My Static Website</h1>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Welcome to my personal webpage and experience">
+    <meta name="author" content="Alberto Vallejo">
+    <title>Alberto Vallejo</title>
+    <!-- VENDOR -->
+    <link rel="stylesheet" type="text/css" href="./vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./vendor/font-awesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="./vendor/font-awesome/css/brands.min.css">
+    <link rel="stylesheet" href="./vendor/font-awesome/css/solid.min.css" >
+    <!-- ASSETS -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/variables.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/global.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/header.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/about.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/experience.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/work_with.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/contact.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/footer.css" />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap" rel="stylesheet">
+  </head>
+
+  <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    <!-- NAVBAR -->
+    <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
+      <div class="container">
+        <ul class="nav">
+          <li class="item"><a class="link" href="#home">Home</a></li>
+          <li class="item"><a class="link" href="#about">About</a></li>
+          <li class="item"><a class="link" href="#experience">Work experience</a></li>
+          <li class="item"><a class="link" href="#work">Worked with</a></li>
+          <li class="item"><a class="link" href="#contact">Contact</a></li>
+        </ul>
+
+        <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
+          <div class="hamburger-box">
+            <div class="hamburger-inner"></div>
+          </div>
+        </a>
+      </div>
+  </nav>
+
+    <!-- HEADER -->
+    <header class="header" id="home">
+      <div class="overlay"></div>
+
+      <div class="container header--content">
+        <h1 class="header--title">
+          <span class="up">Hello!</span>
+          <span class="down">I'm Abhishek Singh</span>
+        </h1>
+
+        <p class="header--subtitle">Machine Learning Engineer</p>
+      </div>
     </header>
-    <main>
-        <p>This is a simple static website hosted on GitHub.</p>
-    </main>
-    <footer>
-        <p>&copy; 2023 My Static Website</p>
-    </footer>
-    <script src="js/scripts.js"></script>
-</body>
+
+    <!-- ABOUT -->
+    <section class="section pt-0" id="about">
+      <div class="container text-center">
+        <div class="about">
+          <div class="about--img-holder">
+            <img src="assets/images/abhi.jpg" class="about-img">
+          </div>
+          <div class="about--caption">
+            <h2 class="section-title mb-3">About Me</h2>
+
+            <p>
+              Hola! Welcome to my website.
+            </p>
+            <p>
+              Feel free to look at my work experience or download my resume. I am a Mexican currently
+              living in Toronto, Canada.
+            </p>
+            <p>
+              I started working as a web developer in 2012, using Ruby on Rails in a Web Consultancy company
+              in one of my favorite cities, Colima, Mexico. Since that moment, I&#39;ve been fascinated by creating
+              new Web Applications, motivated to try new strategies or frameworks, and of course, the chance
+              to work with amazing people over these years.
+            </p>
+            <p>
+              Luckily, I've had the chance to work on small projects with just a couple of teammates to
+              work on fast-growing startups with a huge team behind. I've had the pleasure of working with
+              startups from Mexico, the US, and Canada, being part of outstanding teams where I learned a
+              lot and felt each project as my own.
+            </p>
+            <p>
+              But coding is not everything in my life. When I'm far from the computer, I watch soccer or
+              rugby games, go camping, try new food, or cook, and I also love to ride my motorcycle on country
+              roads with beautiful landscapes.
+            </p>
+
+            <a class="btn-rounded btn btn-outline-primary"
+                href="./assets/docs/AbhiResume.pdf"
+                target="_blank">
+              Download CV
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK EXPERIENCE -->
+    <section class="section" id="experience">
+      <div class="container text-center">
+        <h2 class="section-title mb-3">Work experience</h2>
+
+        <div class="experience-card">
+          <div class="experience-card--body">
+            <h5 class="experience-card--title">Software Development Engineer @ HiMama (Toronto, ON, Canada)</h6>
+            <p class="experience-card--caption">Nov 2021 - Present</p>
+            <p class="experience-card--content">
+              As a Full-Stack Developer in Himama, my primary responsibility is to deliver clean, scalable,
+              and efficient code for various tasks, including implementing new features, system refactoring,
+              architectural redesigns, and meticulous bug resolution on both ends of the application since
+              creating new classes and services using Ruby on Rails or adding new API entry points in GraphQL
+              in the Back to improve the UX using React and Typescript in the Front.
+              Additionally, I am dedicated to enhancing code reliability by developing comprehensive
+              test suites to ensure high coverage (using Rspec and Jest).
+            </p>
+            <p class="experience-card--content">
+              Throughout my tenure, I have frequently assumed leadership roles in project management,
+              where I have been involved in the strategic planning and design of development approaches.
+              My responsibilities in these capacities included crafting and prioritizing solution roadmaps
+              to ensure the timely rollout of high-impact features while adhering to the projected timelines.
+            </p>
+            <p class="experience-card--content">
+              Beyond my primary coding duties, I actively engage in agile sprint planning, accurately
+              estimating efforts by pointing tickets. My involvement in Code Reviews is characterized by
+              a collaborative spirit, where I scrutinize code for quality and adherence to standards
+              and proactively share insights and suggest improvements.
+            </p>
+            <p class="experience-card--content">
+              I am keen on fostering a problem-solving culture within the team, consistently bringing forward
+              innovative ideas to navigate challenges and optimize our development processes.
+            </p>
+            <a href="https://www.himama.com" target="_blank" class="experience-card--link">
+              Visit Himama site
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="experience-card">
+          <div class="experience-card--body">
+            <h5 class="experience-card--title">Software Development Engineer @ RoverPass (Austin, TX, USA)</h6>
+            <p class="experience-card--caption">April 2019 - Nov 2021 (+2 years)</p>
+            <p class="experience-card--content">
+              As a Full-Stack Engineer from the Roverpass engineering team, my responsibilities are more
+              focused on the Back-End work with Ruby on Rails, activities like developing efficient queries
+              from a PostgreSQL database, building services (like payment services using Stripe), growing
+              the test coverage, and developing the site API using GraphQL are part of my daily activities.
+            </p>
+            <p class="experience-card--content">
+              Nonetheless, I also have some time to work on the site's Front-End development or improve
+              features built with React. Other essential duties that are part of my responsibilities are
+              participating in the sprint planning to define the course of action for new features or
+              refactors, helping to set the effort on tickets, doing Code Review to Pull Requests,
+              and supporting less experienced teammates.
+            </p>
+            <a href="https://www.roverpass.com" target="_blank" class="experience-card--link">
+              Visit Roverpass site
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="experience-card">
+          <div class="experience-card--body">
+            <h5 class="experience-card--title">Software Development Engineer @ Everest (Austin, TX, USA)</h6>
+            <p class="experience-card--caption">Aug 2017 - Nov 2018 (+1 years)</p>
+            <p class="experience-card--content">
+              I joined the growing Everest engineering team as a full-stack developer. It was a great
+              opportunity but with great responsibility because it was the first time they accepted a
+              remote team member, so I knew that communication was the key to success.
+            </p>
+            <p class="experience-card--content">
+              As a Full Stack Dev, one of my primary responsibilities was to help improve the site&#39;s performance
+              by applying best practices, mainly in the DB queries and Rails models, and start to build the
+              site&#39;s suit test using Unit Test, Rspec, and Capybara.
+            </p>
+            <p class="experience-card--content">
+              On the Front-End side, I had the opportunity to start working with React and Redux to
+              switch the conventional Rails views to use these tools around all the user interface,
+              improving the existing pages and adding new ones.
+            </p>
+            <a href="https://www.everfest.com" target="_blank" class="experience-card--link">
+              Visit Everfest site
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="experience-card">
+          <div class="experience-card--body">
+            <h5 class="experience-card--title">Software Development Engineer @ Devgile (Colima, COL, México)</h6>
+            <p class="experience-card--caption">May 2014 - Aug 2017 (+3 years)</p>
+            <p class="experience-card--content">
+              I was part of DevGile&#39;s engineering team during that time, I had the opportunity to work
+                with around six different projects, each with unique challenges. As a Full-Stack Developer,
+                I used to work on both sides of those projects since helping to design new data structures for
+                the databases to change the User Interface of the sites thoroughly.
+            </p>
+            <a href="https://www.devgile.com" target="_blank" class="experience-card--link">
+              Visit Devgile site
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="experience-card">
+          <div class="experience-card--body">
+            <h5 class="experience-card--title">Software Development Engineer @ Crowd Interactive (Colima, COL, México)</h6>
+            <p class="experience-card--caption">Apr 2012 - May 2014 (+2 years)</p>
+            <p class="experience-card--content">
+              Working at Crowd Interactive helped me to set the basis of my development career.
+              As a Jr Back-End Developer, I started using the "Pair Programming" strategy with more
+              experienced teammates. Still, I quickly started getting assigned bugs or futures to
+              do on my own. Increasing or Improving the Tests coverage was also an assignation added
+              with every task I developed.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK WITH -->
+    <section class="section" id="work">
+      <div class="container text-center">
+        <h2 class="section-title mb-3">Experience work with</h2>
+
+        <div class="work-wrapper">
+          <div class="work-card">
+            <div class="work-card--header">
+              <i class="fa-solid fa-server work-card--icon"></i>
+            </div>
+            <div class="work-card--body">
+              <h6 class="work-card--title">Back-End</h6>
+              <ul class="work-card--list">
+                <li>Ruby on Rails</li>
+                <li>GraphQL</li>
+                <li>PostGreSQL</li>
+                <li>MySQL</li>
+                <li>Rspec</li>
+                <li>Capybara</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="work-card">
+            <div class="work-card--header">
+              <i class="fa-solid fa-computer work-card--icon"></i>
+            </div>
+            <div class="work-card--body">
+              <h6 class="work-card--title">Front-End</h6>
+              <ul class="work-card--list">
+                <li>Javascript</li>
+                <li>React</li>
+                <li>TypeScript</li>
+                <li>Redux</li>
+                <li>JQuery</li>
+                <li>Jest</li>
+              </ul>
+            </div>
+          </div>
+
+
+          <div class="work-card">
+            <div class="work-card--header">
+              <i class="fa-solid fa-network-wired work-card--icon"></i>
+            </div>
+            <div class="work-card--body">
+              <h6 class="work-card--title">Cooperative</h6>
+              <ul class="work-card--list">
+                <li>AWS S3</li>
+                <li>Heroku</li>
+                <li>Asana</li>
+                <li>Jira</li>
+                <li>Trello</li>
+                <li>Github</li>
+                <li>BitBucket</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container text-center">
+        <h2 class="section-title mb-3">Contact</h2>
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="contact-card">
+              <div class="body">
+                <p class="m-0"><i class="fa-regular fa-envelope icon"></i></p>
+                <h6 class="title">Email</h6>
+                <div class="contact-card-overlay">
+                  <a class="contact-card-caption" href="mailto:javr1088@gmail.com">Send me an Email!</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-card">
+              <div class="body">
+                <p class="m-0"><i class="fa-brands fa-linkedin icon"></i></p>
+                <h6 class="title">Linkedin</h6>
+                <div class="contact-card-overlay">
+                  <a class="contact-card-caption" href="https://www.linkedin.com/in/albertovallejo/" target="_blank">
+                    Contact me
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-card">
+              <div class="body">
+                <p class="m-0"><i class="fa-brands fa-github icon"></i></p>
+                <p class="title">Github</p>
+                <div class="contact-card-overlay">
+                  <a class="contact-card-caption" href="https://github.com/alberto-vallejo-ci" target="_blank">
+                    Check My Repos
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <div class="container">
+      <footer class="footer">
+        <p class="mb-0">
+          Copyright
+          <script>document.write(new Date().getFullYear())</script> &copy;
+          Alberto Vallejo
+        </p>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="./vendor/jquery/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="./vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./vendor/bootstrap/js/bootstrap.affix.js"></script>
+    <script type="text/javascript" src="./assets/js/navbar.js"></script>
+  </body>
 </html>
