@@ -1,6 +1,20 @@
-/* CONTACT SECTION */
+/* CONTACT SECTION - PREMIUM */
 .contact-section {
-  background: white;
+  background: linear-gradient(135deg, #f8fafc 0%, #fef5ff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-section::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  left: -10%;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(236, 72, 153, 0.15) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 .section-subtitle {
@@ -11,17 +25,18 @@
 
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
   margin-bottom: 4rem;
 }
 
 .contact-card {
   position: relative;
-  padding: 2rem;
-  background: linear-gradient(135deg, #f9fafb, white);
-  border: 2px solid var(--light-gray);
-  border-radius: 12px;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px) saturate(180%);
+  border: 1.5px solid rgba(255, 255, 255, 0.8);
+  border-radius: 24px;
   text-align: center;
   transition: all var(--transition-base);
   display: flex;
@@ -31,64 +46,80 @@
   text-decoration: none;
   color: inherit;
   overflow: hidden;
+  animation: fadeInUp 0.8s cubic-bezier(0.23, 1, 0.320, 1) backwards;
 }
+
+.contact-card:nth-child(1) { animation-delay: 0.1s; }
+.contact-card:nth-child(2) { animation-delay: 0.2s; }
+.contact-card:nth-child(3) { animation-delay: 0.3s; }
 
 .contact-card::before {
   content: '';
   position: absolute;
   top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-  transition: left var(--transition-base);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), transparent);
+  opacity: 0;
+  transition: opacity var(--transition-base);
   pointer-events: none;
 }
 
 .contact-card:hover::before {
-  left: 100%;
+  opacity: 1;
 }
 
 .contact-card:hover {
   border-color: var(--primary);
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(99, 102, 241, 0.3), 0 0 1px rgba(99, 102, 241, 0.5);
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .contact-icon {
-  width: 60px;
-  height: 60px;
-  border-radius: 12px;
+  width: 70px;
+  height: 70px;
+  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.75rem;
   transition: all var(--transition-base);
+  position: relative;
 }
 
 .contact-card-email .contact-icon {
-  background: linear-gradient(135deg, rgba(0, 113, 183, 0.1), rgba(0, 113, 183, 0.05));
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(99, 102, 241, 0.08));
   color: var(--primary);
+  border: 2px solid rgba(99, 102, 241, 0.2);
 }
 
 .contact-card-linkedin .contact-icon {
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(59, 130, 246, 0.05));
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(59, 130, 246, 0.08));
   color: #3b82f6;
+  border: 2px solid rgba(59, 130, 246, 0.2);
 }
 
 .contact-card-github .contact-icon {
-  background: linear-gradient(135deg, rgba(17, 24, 39, 0.1), rgba(17, 24, 39, 0.05));
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.2), rgba(15, 23, 42, 0.08));
   color: var(--dark);
+  border: 2px solid rgba(15, 23, 42, 0.2);
 }
 
 .contact-card:hover .contact-icon {
-  transform: scale(1.2) rotate(-5deg);
+  transform: scale(1.2) rotate(-8deg);
+  background: linear-gradient(135deg, var(--gradient-primary));
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.4);
 }
 
 .contact-card h4 {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 1.375rem;
   color: var(--dark);
+  font-weight: 800;
 }
 
 .contact-card p {
@@ -100,7 +131,7 @@
 .contact-cta {
   display: inline-block;
   color: var(--primary);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.9rem;
   margin-top: 0.5rem;
   transition: all var(--transition-base);
@@ -111,6 +142,7 @@
   content: '→';
   margin-left: 0.5rem;
   transition: transform var(--transition-base);
+  display: inline-block;
 }
 
 .contact-card:hover .contact-cta {
@@ -118,52 +150,75 @@
 }
 
 .contact-card:hover .contact-cta::after {
-  transform: translateX(4px);
+  transform: translateX(6px);
 }
 
 /* CTA SECTION */
 .contact-cta-section {
-  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  background: var(--gradient-primary);
   color: white;
-  padding: 4rem 2rem;
-  border-radius: 16px;
+  padding: 4.5rem 2rem;
+  border-radius: 28px;
   text-align: center;
-  box-shadow: var(--shadow-xl);
+  box-shadow: 0 30px 60px rgba(99, 102, 241, 0.3);
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.8s cubic-bezier(0.23, 1, 0.320, 1) 0.4s backwards;
+}
+
+.contact-cta-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 .contact-cta-section h3 {
-  font-size: 2rem;
+  font-size: 2.25rem;
   color: white;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+  position: relative;
+  z-index: 1;
 }
 
 .contact-cta-section p {
   font-size: 1.125rem;
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .contact-cta-section .btn {
-  background: white;
+  background: rgba(255, 255, 255, 0.95);
   color: var(--primary);
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 .contact-cta-section .btn:hover {
-  background: var(--light);
+  background: white;
   color: var(--primary-dark);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 576px) {
   .contact-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .contact-cta-section {
-    padding: 2rem 1rem;
+    padding: 2.5rem 1rem;
   }
 
   .contact-cta-section h3 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
   }
 }

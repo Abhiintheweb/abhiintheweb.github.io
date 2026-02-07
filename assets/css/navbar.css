@@ -1,9 +1,9 @@
-/* NAVBAR */
+/* NAVBAR - PREMIUM GLASSMORPHISM */
 .custom-navbar {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  box-shadow: var(--shadow-sm);
+  background: rgba(248, 250, 252, 0.7);
+  backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(99, 102, 241, 0.1);
+  box-shadow: 0 8px 32px rgba(99, 102, 241, 0.08);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -31,16 +31,26 @@
 
 .brand-logo {
   font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--primary);
-  width: 40px;
-  height: 40px;
+  font-weight: 800;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
-  background: var(--primary-light);
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(236, 72, 153, 0.2));
+  border: 1.5px solid rgba(99, 102, 241, 0.3);
   font-family: var(--font-heading);
+  transition: all var(--transition-base);
+}
+
+.brand-logo:hover {
+  transform: scale(1.05) rotate(-2deg);
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.3), rgba(236, 72, 153, 0.3));
 }
 
 .navbar-menu {
@@ -57,7 +67,8 @@
     top: 60px;
     left: 0;
     right: 0;
-    background: white;
+    background: rgba(248, 250, 252, 0.95);
+    backdrop-filter: blur(20px);
     flex-direction: column;
     gap: 0;
     max-height: 0;
@@ -67,7 +78,7 @@
 
   .navbar-menu.show {
     max-height: 400px;
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.15);
   }
 }
 
@@ -79,9 +90,10 @@
   display: block;
   padding: var(--spacing-lg) var(--spacing-lg);
   color: var(--secondary);
-  font-weight: 500;
-  transition: color var(--transition-fast);
+  font-weight: 600;
+  transition: all var(--transition-fast);
   position: relative;
+  font-size: 0.95rem;
 }
 
 @media (max-width: 991px) {
@@ -91,22 +103,34 @@
   }
 }
 
-.nav .link::after {
+.nav .link::before {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   width: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--primary), var(--accent));
+  background: var(--gradient-primary);
   border-radius: 2px;
-  transition: width var(--transition-base);
+  transition: width var(--transition-fast);
 }
 
 @media (max-width: 991px) {
-  .nav .link::after {
+  .nav .link::before {
     display: none;
   }
+}
+
+.nav .link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.2), transparent);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
 }
 
 .nav .link:hover,
@@ -114,12 +138,16 @@
   color: var(--primary);
 }
 
-.nav .link:hover::after,
-.nav .link.active::after {
+.nav .link:hover::before,
+.nav .link.active::before {
   width: 100%;
 }
 
-/* Hamburger Menu */
+.nav .link:hover::after {
+  opacity: 1;
+}
+
+/* Hamburger Menu - Enhanced */
 .hamburger {
   display: none;
   background: none;
@@ -145,47 +173,50 @@
 .hamburger-inner {
   position: absolute;
   width: 100%;
-  height: 3px;
-  background: var(--dark);
+  height: 2.5px;
+  background: var(--secondary);
   top: 50%;
   left: 0;
-  margin-top: -2px;
+  margin-top: -1.25px;
   border-radius: 3px;
   transition: all var(--transition-base);
+  box-shadow: 0 8px 0 0 var(--secondary), 0 16px 0 0 var(--secondary);
 }
 
 .hamburger-inner::before,
 .hamburger-inner::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  background: var(--dark);
-  left: 0;
-  border-radius: 3px;
-  transition: all var(--transition-base);
-}
-
-.hamburger-inner::before {
-  top: -8px;
-}
-
-.hamburger-inner::after {
-  bottom: -8px;
+  display: none;
 }
 
 .hamburger.is-active .hamburger-inner {
   background: transparent;
+  box-shadow: none;
 }
 
 .hamburger.is-active .hamburger-inner::before {
-  transform: rotate(45deg);
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2.5px;
+  background: var(--primary);
   top: 0;
+  left: 0;
+  border-radius: 3px;
+  transform: rotate(45deg);
+  display: block;
 }
 
 .hamburger.is-active .hamburger-inner::after {
-  transform: rotate(-45deg);
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2.5px;
+  background: var(--primary);
   bottom: 0;
+  left: 0;
+  border-radius: 3px;
+  transform: rotate(-45deg);
+  display: block;
 }
 
 @media (max-width: 576px) {
@@ -195,7 +226,7 @@
 
   .brand-logo {
     font-size: 1.25rem;
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
   }
 }
