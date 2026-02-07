@@ -1,15 +1,24 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Welcome to my personal webpage and experience">
-    <meta name="author" content="Alberto Vallejo">
-    <title>Alberto Vallejo</title>
+    <meta name="description" content="Abhishek Singh - Machine Learning Engineer & VP of Engineering">
+    <meta name="author" content="Abhishek Singh">
+    <meta name="theme-color" content="#0071b7">
+    <title>Abhishek Singh | VP Engineering & ML Expert</title>
+    
     <!-- VENDOR -->
     <link rel="stylesheet" type="text/css" href="./vendor/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./vendor/font-awesome/css/fontawesome.min.css">
     <link rel="stylesheet" href="./vendor/font-awesome/css/brands.min.css">
-    <link rel="stylesheet" href="./vendor/font-awesome/css/solid.min.css" >
+    <link rel="stylesheet" href="./vendor/font-awesome/css/solid.min.css">
+    
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
     <!-- ASSETS -->
     <link rel="stylesheet" type="text/css" href="./assets/css/variables.css" />
     <link rel="stylesheet" type="text/css" href="./assets/css/global.css" />
@@ -20,21 +29,20 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/work_with.css" />
     <link rel="stylesheet" type="text/css" href="./assets/css/contact.css" />
     <link rel="stylesheet" type="text/css" href="./assets/css/footer.css" />
-    <!-- FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap" rel="stylesheet">
   </head>
 
   <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
     <!-- NAVBAR -->
-    <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
+    <nav class="custom-navbar navbar-fixed" data-spy="affix" data-offset-top="0">
       <div class="container">
-        <ul class="nav">
+        <div class="navbar-brand">
+          <a href="#home" class="brand-logo">AS</a>
+        </div>
+        <ul class="nav navbar-menu">
           <li class="item"><a class="link" href="#home">Home</a></li>
           <li class="item"><a class="link" href="#about">About</a></li>
-          <li class="item"><a class="link" href="#experience">Work experience</a></li>
-          <li class="item"><a class="link" href="#work">Worked with</a></li>
+          <li class="item"><a class="link" href="#experience">Experience</a></li>
+          <li class="item"><a class="link" href="#skills">Skills</a></li>
           <li class="item"><a class="link" href="#contact">Contact</a></li>
         </ul>
 
@@ -44,271 +52,327 @@
           </div>
         </a>
       </div>
-  </nav>
+    </nav>
 
-    <!-- HEADER -->
-    <header class="header" id="home">
-      <div class="overlay"></div>
-
-      <div class="container header--content">
-        <h1 class="header--title">
-          <span class="up">Hello!</span>
-          <span class="down">I'm Abhishek Singh</span>
-        </h1>
-
-        <p class="header--subtitle">Machine Learning Engineer</p>
-      </div>
-    </header>
-
-    <!-- ABOUT -->
-    <section class="section pt-0" id="about">
-      <div class="container text-center">
-        <div class="about">
-          <div class="about--img-holder">
-            <img src="assets/images/abhi.jpg" class="about-img">
-          </div>
-          <div class="about--caption">
-            <h2 class="section-title mb-3">About Me</h2>
-
-            <p>
-              Hi! Welcome to my website.
-            </p>
-            <p>
-              Feel free to look at my work experience or download my resume. If you have any questions or want to contact me, you can do it through the contact section.
-            </p>
-            <p>
-              I am currently serving as a Vice President of Engineering in FinOps at JPMorgan. 
-              My role focuses on optimizing cloud infrastructure operations to reduce costs and 
-              delivering cost-efficient solutions to our clients. 
-              Presently, I am working on a solution that leverages cost and usage 
-              reports for cloud spending. This involves utilizing large 
-              language models (LLMs) to help clients analyze their 
-              cost and usage data effectively. 
-              Additionally, I have developed an end-to-end pipeline that 
-              synchronizes data required by teams across JPMorgan, 
-              ensuring streamlined and efficient operations.
-            </p>
-            <p>
-              I have a strong background in software development, system design,
-              with experience in Back-End development, 
-              cloud computing, and machine learning. 
-              I have worked on various projects that have 
-              honed my skills in software development, 
-              data analysis, and cloud computing. 
-              I have also developed a keen interest in machine learning 
-              and have worked on projects that have helped me 
-              gain a deeper understanding of the field. 
-
-            </p>
-            <p>
-              I am passionate about technology and enjoy working on 
-              projects that challenge me and help me grow as a professional. 
-              I am always looking for opportunities to learn new things 
-              and expand my knowledge in the field of technology. 
-              I am excited about the future of technology and 
-              look forward to contributing to its growth and development.
-            
-            </p>
-
-            <a class="btn-rounded btn btn-outline-primary"
-                href="./assets/docs/AbhiResume.pdf"
-                target="_blank">
-              Download CV
+    <!-- HERO HEADER -->
+    <header class="hero-header" id="home">
+      <div class="hero-overlay"></div>
+      
+      <div class="container hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">
+            <span class="hero-greeting">Welcome</span>
+            <span class="hero-name">Abhishek Singh</span>
+          </h1>
+          <p class="hero-subtitle">VP Engineering in FinOps | Machine Learning Engineer | Cloud Architect</p>
+          <div class="hero-cta">
+            <a href="#about" class="btn btn-primary btn-lg">Discover More</a>
+            <a href="./AbhiResume.pdf" class="btn btn-outline-primary btn-lg" target="_blank">
+              <i class="fas fa-download"></i> Download CV
             </a>
           </div>
         </div>
+        <div class="hero-image">
+          <div class="image-wrapper">
+            <img src="./assets/images/abhi.jpg" alt="Abhishek Singh" class="profile-image">
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator">
+        <span></span>
+      </div>
+    </header>
+
+    <!-- ABOUT SECTION -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">About Me</h2>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="about-content">
+          <div class="about-text">
+            <p class="lead">
+              I'm a results-driven engineering leader with 5+ years of experience building scalable systems and leading high-performing teams.
+            </p>
+            
+            <p>
+              As VP of Engineering in FinOps at JPMorgan Chase, I architect cost optimization solutions leveraging cloud infrastructure, large language models, and data engineering. My focus is delivering maximum value to clients while ensuring operational excellence.
+            </p>
+
+            <p>
+              My expertise spans <strong>full-stack software development</strong>, <strong>cloud-native architecture</strong>, <strong>machine learning systems</strong>, and <strong>team leadership</strong>. I've designed systems handling 200k+ requests per minute and led teams through complex technical transformations.
+            </p>
+
+            <p>
+              I'm passionate about solving hard problems, mentoring emerging talent, and leveraging cutting-edge technologies to create meaningful business impact.
+            </p>
+
+            <div class="about-stats">
+              <div class="stat">
+                <h4>5+</h4>
+                <p>Years Experience</p>
+              </div>
+              <div class="stat">
+                <h4>15+</h4>
+                <p>Technologies</p>
+              </div>
+              <div class="stat">
+                <h4>100k+</h4>
+                <p>Requests/min</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-image">
+            <img src="./assets/images/abhi.jpg" alt="Abhishek Singh" class="about-img">
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- WORK EXPERIENCE -->
-    <section class="section" id="experience">
-      <div class="container text-center">
-        <h2 class="section-title mb-3">Work experience</h2>
-
-        <div class="experience-card">
-          <div class="experience-card--body">
-            <h5 class="experience-card--title">Lead Software Engineer(VP) - JP Morgan Chase, London</h6>
-            <p class="experience-card--caption">April 2024 - Present</p>
-            <p class="experience-card--content">
-              I am currently serving as a Vice President of Engineering in FinOps at JPMorgan.
-              My role focuses on optimizing cloud infrastructure operations to reduce costs and
-              delivering cost-efficient solutions to our clients.
-
-              Presently, I am working with a small team, on a solution that leverages cost and usage reports for cloud spending.
-              This involves utilizing large language models (LLMs) to help clients analyze their cost and usage data effectively.
-              I have designed and developed an end-to-end pipeline that synchronizes data required by teams across JPMorgan,
-              Also currently i am working on llm integration to help clients analyze their cost and usage data effectively.
-
-              We have used following technologies in this project:
-              <ul>
-                <li>Python</li>
-                <li>AWS Glue(PySpark)</li>
-                <li>S3, Athena</li>
-                <li>Redshift</li>
-                <li>Lambda</li>
-                <li>API Gateway</li>
-                <li>Step Functions</li>
-                <li>Large Language Models</li>
-              </ul>
-
-            </p>
-            <p class="experience-card--content">
-            Thoughout my career at JPMorgan, 
-            I have worked my leadership skills, 
-            communication skills, and technical skills. 
-            I am always up for a challenge and enjoy working on projects that push me to grow and learn. 
-            </p>
-          </div>
+    <!-- EXPERIENCE SECTION -->
+    <section class="section experience-section" id="experience">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title">Professional Experience</h2>
+          <div class="title-underline mx-auto"></div>
         </div>
 
-        <div class="experience-card">
-          <div class="experience-card--body">
-            <h5 class="experience-card--title">Senior Software Development Engineer @ Ballys Interactive (London, United Kingdom)</h6>
-            <p class="experience-card--caption">April 2022 - April 2024 (2 years)</p>
-            <p class="experience-card--content">
-              
-              I have a passion for building efficient and scalable systems that solve complex problems. 
-              I designed a high-performance search engine using Elasticsearch and Node.js, 
-              capable of handling over 200,000 requests per minute. 
-              Additionally, I developed an event-driven service to manage resource-intensive tasks, 
-              enhancing scalability and optimizing performance. 
-              By offloading heavy operations from main services, 
-              I streamlined workflows and improved system efficiency.
-               With a mindset of continuous learning and sharing, I strive to deliver innovative solutions that make a real impact
-            </p>
-            <p class="experience-card--content">
-              Experienced software engineer with a proven track record in designing scalable architectures for high-volume applications, handling up to 100k requests per minute. Proficient in creating HLD/LLD for services, implementing contract testing for seamless communication, and optimizing infrastructure using Kubernetes for pod orchestration. Skilled in researching and implementing advanced search techniques and resolving high-volume data caching challenges to enhance application performance and accuracy.
-            </p>
-          </div>
-        </div>
-
-        
-
-    <!-- WORK WITH -->
-    <section class="section" id="work">
-      <div class="container text-center">
-        <h2 class="section-title mb-3">Experience work with</h2>
-
-        <div class="work-wrapper">
-          <div class="work-card">
-            <div class="work-card--header">
-              <i class="fa-solid fa-server work-card--icon"></i>
-            </div>
-            <div class="work-card--body">
-              <h6 class="work-card--title">Back-End</h6>
-              <ul class="work-card--list">
-                <li>Ruby on Rails</li>
-                <li>GraphQL</li>
-                <li>PostGreSQL</li>
-                <li>MySQL</li>
-                <li>Rspec</li>
-                <li>Capybara</li>
-              </ul>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content experience-card">
+              <div class="experience-card-header">
+                <h3 class="experience-title">VP of Engineering - FinOps</h3>
+                <p class="experience-company">JPMorgan Chase | London, UK</p>
+                <span class="experience-period">Apr 2024 - Present</span>
+              </div>
+              <p class="experience-description">
+                Leading cost optimization initiatives for JPMorgan's cloud infrastructure. Architected an end-to-end data pipeline synchronizing cost and usage reports, integrated with LLMs to enable intelligent cost analysis for enterprise clients. Technologies: AWS (Glue, S3, Athena, Redshift, Lambda), Python, Step Functions, API Gateway.
+              </p>
+              <div class="experience-tags">
+                <span class="tag">Leadership</span>
+                <span class="tag">Cloud Architecture</span>
+                <span class="tag">FinOps</span>
+                <span class="tag">Machine Learning</span>
+              </div>
             </div>
           </div>
 
-          <div class="work-card">
-            <div class="work-card--header">
-              <i class="fa-solid fa-computer work-card--icon"></i>
-            </div>
-            <div class="work-card--body">
-              <h6 class="work-card--title">Front-End</h6>
-              <ul class="work-card--list">
-                <li>Javascript</li>
-                <li>React</li>
-                <li>TypeScript</li>
-                <li>Redux</li>
-                <li>JQuery</li>
-                <li>Jest</li>
-              </ul>
-            </div>
-          </div>
-
-
-          <div class="work-card">
-            <div class="work-card--header">
-              <i class="fa-solid fa-network-wired work-card--icon"></i>
-            </div>
-            <div class="work-card--body">
-              <h6 class="work-card--title">Cooperative</h6>
-              <ul class="work-card--list">
-                <li>AWS S3</li>
-                <li>Heroku</li>
-                <li>Asana</li>
-                <li>Jira</li>
-                <li>Trello</li>
-                <li>Github</li>
-                <li>BitBucket</li>
-              </ul>
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content experience-card">
+              <div class="experience-card-header">
+                <h3 class="experience-title">Senior Software Engineer</h3>
+                <p class="experience-company">Ballys Interactive | London, UK</p>
+                <span class="experience-period">Apr 2022 - Apr 2024</span>
+              </div>
+              <p class="experience-description">
+                Designed and deployed a high-performance search engine using Elasticsearch handling 200k+ requests per minute. Architected event-driven microservices for resource-intensive operations. Optimized Kubernetes infrastructure and implemented contract testing for seamless service communication. Mentored junior engineers on system design principles.
+              </p>
+              <div class="experience-tags">
+                <span class="tag">System Design</span>
+                <span class="tag">Elasticsearch</span>
+                <span class="tag">Kubernetes</span>
+                <span class="tag">Microservices</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT -->
-    <section class="section" id="contact">
-      <div class="container text-center">
-        <h2 class="section-title mb-3">Contact</h2>
+    <!-- SKILLS SECTION -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title">Technical Skills</h2>
+          <div class="title-underline mx-auto"></div>
+        </div>
 
-        <div class="row">
-          <div class="col-md-4">
-            <div class="contact-card">
-              <div class="body">
-                <p class="m-0"><i class="fa-regular fa-envelope icon"></i></p>
-                <h6 class="title">Email</h6>
-                <div class="contact-card-overlay">
-                  <a class="contact-card-caption" href="mailto:abhi91.edu@gmail.com">Send me an Email!</a>
-                </div>
-              </div>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <div class="skill-category-header">
+              <i class="fas fa-server skill-icon"></i>
+              <h4>Backend & Infrastructure</h4>
             </div>
+            <ul class="skill-list">
+              <li><span class="badge badge-primary">Python</span></li>
+              <li><span class="badge badge-primary">Ruby on Rails</span></li>
+              <li><span class="badge badge-primary">Node.js</span></li>
+              <li><span class="badge badge-primary">GraphQL</span></li>
+              <li><span class="badge badge-primary">AWS (Glue, S3, Athena, Redshift, Lambda)</span></li>
+              <li><span class="badge badge-primary">Kubernetes</span></li>
+              <li><span class="badge badge-primary">Docker</span></li>
+            </ul>
           </div>
 
-          <div class="col-md-4">
-            <div class="contact-card">
-              <div class="body">
-                <p class="m-0"><i class="fa-brands fa-linkedin icon"></i></p>
-                <h6 class="title">Linkedin</h6>
-                <div class="contact-card-overlay">
-                  <a class="contact-card-caption" href="https://www.linkedin.com/in/abhishek-singh-88860a67/" target="_blank">
-                    Contact me
-                  </a>
-                </div>
-              </div>
+          <div class="skill-category">
+            <div class="skill-category-header">
+              <i class="fas fa-brain skill-icon"></i>
+              <h4>Data & Machine Learning</h4>
             </div>
+            <ul class="skill-list">
+              <li><span class="badge badge-success">Large Language Models (LLMs)</span></li>
+              <li><span class="badge badge-success">PySpark</span></li>
+              <li><span class="badge badge-success">Data Engineering</span></li>
+              <li><span class="badge badge-success">ETL Pipelines</span></li>
+              <li><span class="badge badge-success">Elasticsearch</span></li>
+              <li><span class="badge badge-success">SQL & NoSQL</span></li>
+            </ul>
           </div>
 
-          <div class="col-md-4">
-            <div class="contact-card">
-              <div class="body">
-                <p class="m-0"><i class="fa-brands fa-github icon"></i></p>
-                <p class="title">Github</p>
-                <div class="contact-card-overlay">
-                  <a class="contact-card-caption" href="https://github.com/abhiintheweb" target="_blank">
-                    Check My Repos
-                  </a>
-                </div>
-              </div>
+          <div class="skill-category">
+            <div class="skill-category-header">
+              <i class="fas fa-palette skill-icon"></i>
+              <h4>Frontend & Design</h4>
             </div>
+            <ul class="skill-list">
+              <li><span class="badge badge-info">React</span></li>
+              <li><span class="badge badge-info">TypeScript</span></li>
+              <li><span class="badge badge-info">JavaScript</span></li>
+              <li><span class="badge badge-info">Redux</span></li>
+              <li><span class="badge badge-info">Responsive Design</span></li>
+              <li><span class="badge badge-info">Jest</span></li>
+            </ul>
           </div>
+
+          <div class="skill-category">
+            <div class="skill-category-header">
+              <i class="fas fa-tools skill-icon"></i>
+              <h4>Tools & Practices</h4>
+            </div>
+            <ul class="skill-list">
+              <li><span class="badge badge-warning">Git & CI/CD</span></li>
+              <li><span class="badge badge-warning">Jira & Asana</span></li>
+              <li><span class="badge badge-warning">Contract Testing</span></li>
+              <li><span class="badge badge-warning">System Design</span></li>
+              <li><span class="badge badge-warning">Team Leadership</span></li>
+              <li><span class="badge badge-warning">Agile/Scrum</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title">Get In Touch</h2>
+          <div class="title-underline mx-auto"></div>
+          <p class="section-subtitle">Let's connect and explore how we can work together</p>
+        </div>
+
+        <div class="contact-grid">
+          <a href="mailto:abhi91.edu@gmail.com" class="contact-card contact-card-email">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h4>Email</h4>
+            <p>abhi91.edu@gmail.com</p>
+            <span class="contact-cta">Send me a message</span>
+          </a>
+
+          <a href="https://www.linkedin.com/in/abhishek-singh-88860a67/" target="_blank" class="contact-card contact-card-linkedin">
+            <div class="contact-icon">
+              <i class="fab fa-linkedin"></i>
+            </div>
+            <h4>LinkedIn</h4>
+            <p>Connect with me</p>
+            <span class="contact-cta">View Profile</span>
+          </a>
+
+          <a href="https://github.com/abhiintheweb" target="_blank" class="contact-card contact-card-github">
+            <div class="contact-icon">
+              <i class="fab fa-github"></i>
+            </div>
+            <h4>GitHub</h4>
+            <p>Check my projects</p>
+            <span class="contact-cta">Browse Repos</span>
+          </a>
+        </div>
+
+        <div class="contact-cta-section">
+          <h3>Ready to collaborate?</h3>
+          <p>I'm always interested in discussing new projects and opportunities.</p>
+          <a href="mailto:abhi91.edu@gmail.com" class="btn btn-primary btn-lg">Start a Conversation</a>
         </div>
       </div>
     </section>
 
     <!-- FOOTER -->
-    <div class="container">
-      <footer class="footer">
-        <p class="mb-0">
-          Copyright
-          <script>document.write(new Date().getFullYear())</script> &copy;
-          Abhishek Singh
-        </p>
-      </footer>
-    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h5>Abhishek Singh</h5>
+            <p>VP Engineering in FinOps | Machine Learning Engineer</p>
+          </div>
+          <div class="footer-section">
+            <h5>Quick Links</h5>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#experience">Experience</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h5>Follow</h5>
+            <div class="social-links">
+              <a href="https://linkedin.com/in/abhishek-singh-88860a67/" target="_blank"><i class="fab fa-linkedin"></i></a>
+              <a href="https://github.com/abhiintheweb" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; <span id="year"></span> Abhishek Singh. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
 
+    <!-- SCRIPTS -->
     <script type="text/javascript" src="./vendor/jquery/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="./vendor/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="./vendor/bootstrap/js/bootstrap.affix.js"></script>
     <script type="text/javascript" src="./assets/js/navbar.js"></script>
+    <script>
+      // Set current year in footer
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Smooth scroll behavior
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
+
+      // Fade in on scroll animation
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+      };
+
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.timeline-item, .skill-category, .contact-card').forEach(el => {
+        observer.observe(el);
+      });
+    </script>
   </body>
 </html>
